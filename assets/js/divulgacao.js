@@ -38,6 +38,26 @@
     }
   }
 
+  function toggleValor(templateId, tipo) {
+    const card = document.querySelector(`.templateCard[data-template="${templateId}"]`);
+    if (!card) return;
+
+    const valorField = card.querySelector(".field-valor");
+    const valorPreview = card.querySelector(".previewValor");
+    const valorInput = card.querySelector(`[data-template="${templateId}"][data-field="valor"]`);
+
+    if (tipo === "LANCE") {
+      if (valorField) valorField.classList.add("hidden");
+      if (valorPreview) valorPreview.classList.add("hidden");
+
+      if (valorInput) valorInput.value = "";
+      updatePreview(templateId, "valor", "");
+    } else {
+      if (valorField) valorField.classList.remove("hidden");
+      if (valorPreview) valorPreview.classList.remove("hidden");
+    }
+  }
+
   function hasLetters(s) {
     return /[A-ZÀ-Ü]/i.test(String(s || ""));
   }
@@ -93,6 +113,7 @@
 
     if (field === "tipo") {
       setPreviewBackground(templateId, value);
+      toggleValor(templateId, value);
       return;
     }
 
@@ -143,6 +164,7 @@
     });
 
     setPreviewBackground(templateId, "LANCE");
+    toggleValor(templateId, "LANCE");
   }
 
   async function saveTemplate(templateId) {
@@ -172,11 +194,11 @@
   function initDefaults() {
     document.querySelectorAll("[data-template-preview]").forEach((preview) => {
       const templateId = preview.dataset.templatePreview;
-
       const tipoEl = document.querySelector(`[data-template="${templateId}"][data-field="tipo"]`);
       const tipoVal = tipoEl ? tipoEl.value : "LANCE";
 
       setPreviewBackground(templateId, tipoVal);
+      toggleValor(templateId, tipoVal);
     });
 
     document.querySelectorAll("[data-template][data-field]").forEach((el) => {
