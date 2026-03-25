@@ -110,7 +110,7 @@
 }
 
 /* ==============================
-   PREVIEW (FORMATO REAL)
+   PREVIEW
 ============================== */
 
 .templatePreview {
@@ -146,9 +146,7 @@
 }
 
 /* ==============================
-   CAMPOS SOBRE A ARTE
-   Posicionados em %
-   baseados na arte horizontal real
+   BASE DOS CAMPOS
 ============================== */
 
 .previewField {
@@ -161,11 +159,11 @@
 
 .previewText {
   width: 100%;
-  color: #cfd2d6;
+  color: #d7dbe0;
   font-weight: 900;
   text-transform: uppercase;
   line-height: 1;
-  text-align: center;
+  text-align: left;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -173,57 +171,7 @@
     0 1px 1px rgba(0, 0, 0, 0.55),
     0 2px 4px rgba(0, 0, 0, 0.35);
   letter-spacing: 0.01em;
-}
-
-/* OPORTUNIDADE e LANCE compartilham a mesma base estrutural */
-
-.previewField--id {
-  top: 34.8%;
-  left: 8.8%;
-  width: 37.5%;
-  height: 4.2%;
-}
-
-.previewField--cidade {
-  top: 43.2%;
-  left: 11.5%;
-  width: 27.5%;
-  height: 4.2%;
-}
-
-.previewField--embarque {
-  top: 52.0%;
-  left: 13.3%;
-  width: 22.7%;
-  height: 4.2%;
-}
-
-.previewField--destino {
-  top: 59.0%;
-  left: 12.7%;
-  width: 23.3%;
-  height: 4.2%;
-}
-
-.previewField--descarga {
-  top: 68.5%;
-  left: 13.3%;
-  width: 23.3%;
-  height: 4.2%;
-}
-
-.previewField--saldo {
-  top: 75.5%;
-  left: 11.3%;
-  width: 23.3%;
-  height: 4.2%;
-}
-
-.previewField--valor {
-  top: 83.3%;
-  left: 11.3%;
-  width: 23.3%;
-  height: 4.0%;
+  padding-left: 0;
 }
 
 /* tamanhos */
@@ -240,15 +188,133 @@
   font-size: clamp(12px, 1.05vw, 18px);
 }
 
-/* utilitários */
+/* ==============================
+   OPORTUNIDADE
+============================== */
+
+.templatePreview.is-oportunidade .previewField--id {
+  top: 34.8%;
+  left: 15.8%;
+  width: 26%;
+  height: 4.2%;
+}
+
+.templatePreview.is-oportunidade .previewField--cidade {
+  top: 43.2%;
+  left: 19.3%;
+  width: 22%;
+  height: 4.2%;
+}
+
+.templatePreview.is-oportunidade .previewField--embarque {
+  top: 52.0%;
+  left: 21.8%;
+  width: 20%;
+  height: 4.2%;
+}
+
+.templatePreview.is-oportunidade .previewField--destino {
+  top: 59.0%;
+  left: 20.8%;
+  width: 21%;
+  height: 4.2%;
+}
+
+.templatePreview.is-oportunidade .previewField--descarga {
+  top: 72.1%;
+  left: 20.8%;
+  width: 21%;
+  height: 4.2%;
+}
+
+.templatePreview.is-oportunidade .previewField--saldo {
+  top: 79.2%;
+  left: 18.8%;
+  width: 23%;
+  height: 4.2%;
+}
+
+.templatePreview.is-oportunidade .previewField--valor {
+  top: 86.8%;
+  left: 18.8%;
+  width: 23%;
+  height: 4%;
+}
+
+/* ==============================
+   LANCE
+============================== */
+
+.templatePreview.is-lance .previewField--id {
+  top: 34.8%;
+  left: 15.8%;
+  width: 26%;
+  height: 4.2%;
+}
+
+.templatePreview.is-lance .previewField--cidade {
+  top: 43.2%;
+  left: 19.3%;
+  width: 22%;
+  height: 4.2%;
+}
+
+.templatePreview.is-lance .previewField--embarque {
+  top: 52.0%;
+  left: 21.8%;
+  width: 20%;
+  height: 4.2%;
+}
+
+.templatePreview.is-lance .previewField--destino {
+  top: 59.0%;
+  left: 20.8%;
+  width: 21%;
+  height: 4.2%;
+}
+
+.templatePreview.is-lance .previewField--descarga {
+  top: 72.1%;
+  left: 20.8%;
+  width: 21%;
+  height: 4.2%;
+}
+
+.templatePreview.is-lance .previewField--saldo {
+  top: 79.2%;
+  left: 18.8%;
+  width: 23%;
+  height: 4.2%;
+}
+
+/* ==============================
+   UTILITÁRIOS
+============================== */
+
 .hidden {
   display: none !important;
 }
 
-/* mobile */
+/* ==============================
+   MOBILE
+============================== */
+
 @media (max-width: 768px) {
   .templatePreview {
     max-width: 100%;
     border-radius: 14px;
+  }
+
+  .previewField--id .previewText {
+    font-size: clamp(10px, 1.9vw, 16px);
+  }
+
+  .previewField--cidade .previewText,
+  .previewField--embarque .previewText,
+  .previewField--destino .previewText,
+  .previewField--descarga .previewText,
+  .previewField--saldo .previewText,
+  .previewField--valor .previewText {
+    font-size: clamp(9px, 1.6vw, 14px);
   }
 }
