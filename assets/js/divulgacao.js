@@ -36,6 +36,14 @@
     if (bgImg) {
       bgImg.src = img;
     }
+
+    preview.classList.remove("is-lance", "is-oportunidade");
+
+    if (tipo === "LANCE") {
+      preview.classList.add("is-lance");
+    } else if (tipo === "OPORTUNIDADE") {
+      preview.classList.add("is-oportunidade");
+    }
   }
 
   function toggleValor(templateId, tipo) {
