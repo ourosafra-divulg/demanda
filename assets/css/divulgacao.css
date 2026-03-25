@@ -178,49 +178,49 @@
 /* OPORTUNIDADE e LANCE compartilham a mesma base estrutural */
 
 .previewField--id {
-  top: 35.8%;
+  top: 33.8%;
   left: 10.4%;
   width: 37.5%;
   height: 4.2%;
 }
 
 .previewField--cidade {
-  top: 51.2%;
+  top: 45.2%;
   left: 38.5%;
   width: 27.5%;
   height: 4.2%;
 }
 
 .previewField--embarque {
-  top: 58.6%;
+  top: 55.6%;
   left: 43.3%;
   width: 22.7%;
   height: 4.2%;
 }
 
 .previewField--destino {
-  top: 65.9%;
+  top: 60.9%;
   left: 42.7%;
   width: 23.3%;
   height: 4.2%;
 }
 
 .previewField--descarga {
-  top: 79.0%;
+  top: 65.0%;
   left: 42.7%;
   width: 23.3%;
   height: 4.2%;
 }
 
 .previewField--saldo {
-  top: 86.3%;
+  top: 80.3%;
   left: 42.7%;
   width: 23.3%;
   height: 4.2%;
 }
 
 .previewField--valor {
-  top: 93.3%;
+  top: 85.3%;
   left: 42.7%;
   width: 23.3%;
   height: 4.0%;
