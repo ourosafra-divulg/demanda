@@ -61,8 +61,10 @@
           <label>SALDO</label>
           <input data-template="1" data-field="saldo" placeholder="Ex: 1.500 TON" />
 
-          <label>VALOR</label>
-          <input data-template="1" data-field="valor" placeholder="Ex: R$ 500,00" />
+          <div class="field-valor">
+            <label>VALOR</label>
+            <input data-template="1" data-field="valor" placeholder="Ex: R$ 500,00" />
+          </div>
         </div>
 
         <div class="templatePreview" data-template-preview="1">
@@ -92,7 +94,7 @@
             <div class="previewText" data-bind="saldo" data-placeholder="0 TON"></div>
           </div>
 
-          <div class="previewField previewField--valor">
+          <div class="previewField previewField--valor previewValor">
             <div class="previewText" data-bind="valor" data-placeholder="R$ 0,00"></div>
           </div>
         </div>
