@@ -49,7 +49,6 @@
     if (tipo === "LANCE") {
       if (valorField) valorField.classList.add("hidden");
       if (valorPreview) valorPreview.classList.add("hidden");
-
       if (valorInput) valorInput.value = "";
       updatePreview(templateId, "valor", "");
     } else {
